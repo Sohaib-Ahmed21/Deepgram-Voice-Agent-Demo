@@ -40,12 +40,21 @@ const DeepgramContextProvider = ({ children }) => {
       console.error("Websocket error", err);
     };
 
+    // const onClose = () => {
+    //   clearInterval(keepAlive.current);
+    //   setSocketState(3); // closed
+    //   console.info("WebSocket closed. Attempting to reconnect...");
+    //   setTimeout(connectToDeepgram, 3000); // reconnect after 3 seconds
+    //   setReconnectAttempts((attempts) => attempts + 1);
+    // };
+
     const onClose = () => {
       clearInterval(keepAlive.current);
       setSocketState(3); // closed
-      console.info("WebSocket closed. Attempting to reconnect...");
-      setTimeout(connectToDeepgram, 3000); // reconnect after 3 seconds
-      setReconnectAttempts((attempts) => attempts + 1);
+      console.info("WebSocket closed.");
+      // REMOVE or COMMENT OUT the following lines to stop reconnecting:
+      // setTimeout(connectToDeepgram, 3000); // reconnect after 3 seconds
+      // setReconnectAttempts((attempts) => attempts + 1);
     };
 
     const onMessage = () => {

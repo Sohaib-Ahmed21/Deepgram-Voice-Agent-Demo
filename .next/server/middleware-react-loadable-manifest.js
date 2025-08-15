@@ -1,0 +1,1 @@
+self.__REACT_LOADABLE_MANIFEST="{\"app\\\\components\\\\App.js -> ./AnimationManager\":{\"id\":\"app\\\\components\\\\App.js -> ./AnimationManager\",\"files\":[\"static/chunks/_app-pages-browser_app_components_AnimationManager_tsx.js\"]}}"
